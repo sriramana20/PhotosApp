@@ -12,10 +12,11 @@ struct PhotoDetailView: View {
     @State var imageInfo : ImageModel?
     var body: some View {
         if let validImage = imageInfo {
-            VStack {
+            VStack(alignment: .leading, spacing: 10) {
                 PhotoView(imageinfo: validImage)
                 Text(validImage.description ?? "None").font(.title2).padding(8)
             }.navigationTitle(validImage.name ?? "")
+            Spacer()
         }
     }
 }
