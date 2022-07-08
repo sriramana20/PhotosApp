@@ -20,7 +20,7 @@ class PhotosViewModel: ObservableObject {
             .decode(type: [ImageModel].self, decoder: JSONDecoder())
             .replaceError(with: [])
             .eraseToAnyPublisher()
-            .receive(on: RunLoop.main)
+            .receive(on: DispatchQueue.main)
             .assign(to: \PhotosViewModel.images, on: self)
     }
 }
