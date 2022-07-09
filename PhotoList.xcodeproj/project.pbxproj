@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A97C2F842877C1EA00D98261 /* PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97C2F832877C1EA00D98261 /* PhotoDetailView.swift */; };
+		A9B093732879129400FF0C8A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B093722879129400FF0C8A /* NetworkManager.swift */; };
 		A9E1FC512876FE2800EDD770 /* PhotoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1FC502876FE2800EDD770 /* PhotoListApp.swift */; };
 		A9E1FC532876FE2800EDD770 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1FC522876FE2800EDD770 /* ContentView.swift */; };
 		A9E1FC552876FE2D00EDD770 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9E1FC542876FE2D00EDD770 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		A97C2F832877C1EA00D98261 /* PhotoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailView.swift; sourceTree = "<group>"; };
+		A9B093722879129400FF0C8A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		A9E1FC4D2876FE2800EDD770 /* PhotoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9E1FC502876FE2800EDD770 /* PhotoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListApp.swift; sourceTree = "<group>"; };
 		A9E1FC522876FE2800EDD770 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +71,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		A9B093742879143E00FF0C8A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A9B093722879129400FF0C8A /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		A9E1FC442876FE2800EDD770 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +104,7 @@
 				A9E1FC562876FE2D00EDD770 /* Preview Content */,
 				A97C2F802877C1C600D98261 /* ViewModel */,
 				A97C2F812877C1D200D98261 /* Model */,
+				A9B093742879143E00FF0C8A /* Managers */,
 			);
 			path = PhotoList;
 			sourceTree = "<group>";
@@ -180,6 +191,7 @@
 				A9E1FC532876FE2800EDD770 /* ContentView.swift in Sources */,
 				A9E1FC512876FE2800EDD770 /* PhotoListApp.swift in Sources */,
 				A97C2F842877C1EA00D98261 /* PhotoDetailView.swift in Sources */,
+				A9B093732879129400FF0C8A /* NetworkManager.swift in Sources */,
 				A9E1FC692877233600EDD770 /* PhotoView.swift in Sources */,
 				A9E1FC612877093C00EDD770 /* ImageModel.swift in Sources */,
 				A9E1FC67287720E500EDD770 /* CacheAsyncImage.swift in Sources */,

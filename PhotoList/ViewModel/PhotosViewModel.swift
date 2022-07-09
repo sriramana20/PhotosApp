@@ -9,18 +9,23 @@ import Combine
 import SwiftUI
 
 class PhotosViewModel: ObservableObject {
-    private let url = "https://api.thecatapi.com/v1/breeds"
-    private var task: AnyCancellable?
     
+    private var cancellables = Set<AnyCancellable>()
     @Published var images: [ImageModel] = []
     
     func fetchImages() {
-        task = URLSession.shared.dataTaskPublisher(for: URL(string: url)!)
-            .map { $0.data }
-            .decode(type: [ImageModel].self, decoder: JSONDecoder())
-            .replaceError(with: [])
-            .eraseToAnyPublisher()
-            .receive(on: DispatchQueue.main)
-            .assign(to: \PhotosViewModel.images, on: self)
-    }
+        NetworkManager.shared.getData(endpoint: .breeds, type: ImageModel.self)
+            .sink { completion in
+                switch completion {
+                case .failure(let err):
+                    print("Error is \(err.localizedDescription)")
+                case .finished:
+                    print("Finished")
+                }
+            }
+            receiveValue: { [weak self] imageData in
+                self?.images = imageData
+            }
+            .store(in: &cancellables)
+        }
 }
